@@ -1,0 +1,10 @@
+{
+  "incident_id": "DQ-2026-0042",
+  "rule": "invalid_partner_code",
+  "failed_records": 184,
+  "total_records": 12000,
+  "evidence": [
+    {"id": "run-883", "source": "quality_report", "fact": "184 records carried partner_code=UNKNOWN"},
+    {"id": "mapping-17", "source": "reference_mapping", "fact": "UNKNOWN is absent from the approved partner registry"}
+  ]
+}
