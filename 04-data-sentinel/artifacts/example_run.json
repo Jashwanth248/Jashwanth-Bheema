@@ -1,0 +1,146 @@
+{
+  "run_at": "2026-07-22T22:09:47.571166+00:00",
+  "source": {
+    "path": "04-data-sentinel/tests/fixtures/adult_sample.data",
+    "sha256": "c67cbbc71ae48f977c0835d58c530ff4a146c84835ff42c4854c089940b580c6",
+    "records_received": 3
+  },
+  "decision": {
+    "status": "human_review",
+    "confidence": 0.9,
+    "requires_human_approval": true,
+    "reasons": [
+      "sensitive_fields_detected"
+    ]
+  },
+  "agents": {
+    "schema_agent": {
+      "mappings": [
+        {
+          "source_field": "age",
+          "canonical_field": "age",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "workclass",
+          "canonical_field": "workclass",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "fnlwgt",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "education",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "education_num",
+          "canonical_field": "education_num",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "marital_status",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "occupation",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "relationship",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "race",
+          "canonical_field": "race",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": true
+        },
+        {
+          "source_field": "sex",
+          "canonical_field": "sex",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": true
+        },
+        {
+          "source_field": "capital_gain",
+          "canonical_field": "capital_gain",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "capital_loss",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "hours_per_week",
+          "canonical_field": "hours_per_week",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "native_country",
+          "canonical_field": null,
+          "status": "out_of_scope",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        },
+        {
+          "source_field": "income",
+          "canonical_field": "income",
+          "status": "mapped",
+          "confidence": 1.0,
+          "requires_human_approval": false
+        }
+      ],
+      "confidence": 1.0
+    },
+    "cleaning_agent": {
+      "transformations": {
+        "trimmed": 42
+      },
+      "confidence": 1.0
+    },
+    "validation_agent": {
+      "records_valid": 3,
+      "records_quarantined": 0,
+      "quality_score": 1.0,
+      "confidence": 1.0
+    },
+    "anomaly_agent": {
+      "records_flagged": 1,
+      "rate": 0.3333,
+      "confidence": 0.753
+    }
+  },
+  "quarantine_sample": []
+}
