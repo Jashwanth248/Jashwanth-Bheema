@@ -2,3 +2,5 @@ __pycache__/
 *.py[cod]
 artifacts/
 .venv/
+04-data-sentinel/data/*.csv
+04-data-sentinel/artifacts/latest_run.json
