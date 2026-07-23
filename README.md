@@ -8,6 +8,7 @@ This repository contains production-oriented portfolio projects. They are delibe
 | [02 — AI Data Quality Investigator](02-ai-data-quality-agent) | Evidence-first investigation agent | Agent workflows, retrieval, guardrails, auditability |
 | [03 — ML Anomaly Monitoring](03-ml-anomaly-monitoring) | Anomaly scoring and drift monitoring | Feature engineering, model evaluation, monitoring |
 | [04 — Data Sentinel](04-data-sentinel) | Confidence-aware multi-agent intake | Semantic schema retrieval, cleaning, policy validation, anomaly detection, human review |
+| [05 — Prompt Playground](05-llm-evaluation-platform) | LLM release evaluation platform | Prompt versioning, regression checks, dashboard, FastAPI, Docker, CI |
 
 ## Portfolio principles
 
@@ -22,6 +23,7 @@ python -m unittest discover -s 01-data-quality-at-scale/tests
 python -m unittest discover -s 02-ai-data-quality-agent/tests
 python -m unittest discover -s 03-ml-anomaly-monitoring/tests
 python -m unittest discover -s 04-data-sentinel/tests
+python -m pytest -q 05-llm-evaluation-platform/tests
 ```
 
 ## Contact
