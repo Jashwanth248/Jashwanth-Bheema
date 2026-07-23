@@ -68,3 +68,8 @@ curl -X POST http://127.0.0.1:8000/api/runs \
 ```bash
 python -m pytest -q
 ```
+
+
+
+
+<img width="1465" height="955" alt="Screenshot 2026-07-23 at 1 27 55 PM" src="https://github.com/user-attachments/assets/61cd8fe3-fa0f-4e01-b6ee-f4ef21d80314" />
