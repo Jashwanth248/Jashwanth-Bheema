@@ -2,6 +2,8 @@
 
 This repository contains production-oriented portfolio projects. They are deliberately built around synthetic data and configurable rules where appropriate, plus a public research dataset for the end-to-end intake demonstration, so they demonstrate enterprise data engineering and AI practices without exposing employer or customer data.
 
+> **Recruiters and hiring managers:** See the [resume-ready project showcase](RESUME_PROJECTS.md) for architecture, technologies, expected outputs, and direct links to additional AI, analytics, data engineering, software, and DevOps projects.
+
 | Project | Focus | Demonstrates |
 | --- | --- | --- |
 | [01 — Data Quality at Scale](01-data-quality-at-scale) | Batch validation and remediation | Python, SQL patterns, data contracts, idempotency, observability |
