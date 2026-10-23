@@ -88,17 +88,18 @@ These project summaries are designed for resumes, LinkedIn, recruiter review, an
 
 ---
 
-## District 8 Maintenance GIS Data Workbench
+## SylvaGrid — Vegetation & Maintenance Intelligence
 
-**Geospatial Data Integration, Quality, and Stewardship Application**
+**Real-Time GIS Operations Dashboard and Data Stewardship Workflow**
 
-- **Built a Maintenance Data Intake Workflow:** Created a browser-based workbench that loads synthetic IMMS-style CSV data or a local user-selected extract and checks required fields, duplicate work-order IDs, activity/status domains, route formats, coordinates, dates, and acreage values.
-- **Implemented Spatial Quality Review:** Added quality-coded map markers, a review extent check, a record queue, and row-level findings so a steward can inspect and correct issues before GIS publication.
-- **Prepared Governed GIS Outputs:** Added an editable dataset metadata profile, clean WGS 84 GeoJSON export for rows that pass all checks, annotated CSV review output, and a machine-readable QA report.
-- **Kept the Workflow Reproducible:** Built the validation and export logic as dependency-free JavaScript modules with Node.js automated tests and documented schema, data dictionary, quality rules, and production adaptation considerations.
-- **Expected Output:** A steward loads a maintenance extract and receives a quality summary, mapped records, actionable data issues, and clearly classified GIS-ready output.
-- **Technologies:** JavaScript ES modules, HTML, CSS, Leaflet, CSV, GeoJSON, WGS 84 / CRS84, Node.js test runner.
-- **Repository:** [District 8 Maintenance GIS Data Workbench](https://github.com/Jashwanth248/Jashwanth-Bheema/tree/main/06-district-8-maintenance-gis-workbench)
+- **Built a Spatial Operations View:** Created an interactive map for illustrative vegetation and maintenance work records with treatment zones, corridor context, status symbols, feature selection, and layer controls.
+- **Modeled Live Field Updates:** Added a browser-based event stream that updates synthetic work statuses and operational metrics every few seconds. The dashboard identifies the feed as simulated and does not claim access to an agency system.
+- **Integrated and Reviewed Work Data:** Implemented CSV intake, required-field and domain checks, duplicate-ID detection, coordinate/date/area validation, source lineage and contract-attribution flags, and conversion of square feet, square meters, and hectares to acres.
+- **Prepared Reporting Outputs:** Added WGS 84 GeoJSON export, an annotated work-log CSV, and activity/status summaries for monthly, quarterly, and annual reporting.
+- **Kept the Work Reproducible:** Added sample data, a data dictionary, quality rules, architecture notes, seven Node.js tests, GitHub Actions validation, and a GitHub Pages workflow.
+- **Expected Output:** A GIS steward can review current work activity, spot metadata or location issues, summarize reported treatment acres, and prepare map-ready or period-report outputs.
+- **Technologies:** JavaScript ES modules, HTML, CSS Canvas, CSV, GeoJSON, WGS 84 / CRS84, Node.js test runner, GitHub Actions.
+- **Repository:** [SylvaGrid](https://github.com/Jashwanth248/SylvaGrid)
 
 ---
 
@@ -110,4 +111,4 @@ A two-page resume should normally include only three projects:
 2. **Airline Operations Command Center** for Data Analyst and Data Engineer roles.
 3. **DocuMind Multimodal RAG** for AI/ML Engineer and Software Developer roles.
 
-Use **PulseCart** instead of DocuMind when applying for DevOps, Cloud, Platform, or SRE positions. Use **Road Friend** for full-stack, AI application, or agentic-software positions. For GIS Coordinator or geospatial data stewardship roles, prioritize the **District 8 Maintenance GIS Data Workbench** and pair it with the project most relevant to the position's analytics or application duties.
+Use **PulseCart** instead of DocuMind when applying for DevOps, Cloud, Platform, or SRE positions. Use **Road Friend** for full-stack, AI application, or agentic-software positions. For GIS Coordinator or geospatial data stewardship roles, prioritize **SylvaGrid** and pair it with the project most relevant to the position's analytics or application duties.
