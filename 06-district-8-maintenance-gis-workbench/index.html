@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10231e">
+  <meta name="description" content="A GIS maintenance data workbench for spatial quality checks, metadata stewardship, and GIS-ready exports. Uses synthetic demo records.">
+  <title>District 8 | GIS Data Workbench</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://basemaps.cartocdn.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top"><span class="brand-icon">◈</span><span><strong>District 8 GIS</strong><small>MAINTENANCE DATA OFFICE</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Workspace sections">
+        <a class="selected" href="#overview"><span>▦</span>Overview</a>
+        <a href="#map-section"><span>⌖</span>Spatial review</a>
+        <a href="#quality-section"><span>✓</span>Quality rules</a>
+        <a href="#catalog"><span>▤</span>Dataset metadata</a>
+      </nav>
+      <div class="side-divider"></div>
+      <div class="side-label">ACTIVE DATASET</div>
+      <div class="dataset-mini"><span class="dataset-icon">▧</span><span><b id="side-dataset">Maintenance activities</b><small id="side-record-count">23 records · demo profile</small></span><span class="mini-dot"></span></div>
+      <div class="side-label rule-label">DATA PROFILE</div>
+      <div class="profile-chip"><span class="chip-key">SCHEMA</span><span>Maintenance v1.2</span></div>
+      <div class="profile-chip"><span class="chip-key">GEOMETRY</span><span>Point · WGS 84</span></div>
+      <div class="profile-chip"><span class="chip-key">SENSITIVITY</span><span class="sensitivity"><i></i> Synthetic</span></div>
+      <div class="sidebar-bottom"><div class="user-card"><div class="user-avatar">JB</div><div><b>Jashwanth Bheema</b><small>GIS data steward · demo</small></div><span class="more">···</span></div><div class="side-foot">PORTFOLIO DEMONSTRATION<br>NO AGENCY SYSTEM CONNECTION</div></div>
+    </aside>
+    <main class="main" id="top">
+      <header class="topbar"><div class="crumb">Workspaces <span>/</span> Maintenance GIS <span>/</span> <b>Data readiness</b></div><div class="top-actions"><span class="privacy"><i></i> Local processing</span><button class="button button-light" id="download-report">↓ <span>QA report</span></button><button class="button button-primary" id="export-geojson">Export GIS data <span>↗</span></button></div></header>
+      <div class="content" id="overview">
+        <div class="hero-row"><div><div class="eyebrow">GIS data stewardship · District 8</div><h1>Maintenance data readiness</h1><p class="intro">Review, validate, and prepare field activity records for spatial analysis and mapping.</p></div><div class="hero-meta"><span class="live-dot"></span><span><b>DEMO WORKSPACE</b><small id="updated-at">Updated just now</small></span><button class="icon-button" id="refresh-demo" title="Reload demonstration data">↻</button></div></div>
+        <div class="synthetic-banner"><span class="banner-symbol">ⓘ</span><span><b>Synthetic demonstration data.</b> No Caltrans, IMMS, or employee records are used. The district outline and coordinates are illustrative only.</span><span class="banner-tag">SAFE TO EXPLORE</span></div>
+        <section class="metric-grid" aria-label="Data quality summary">
+          <article class="metric metric-score"><div class="metric-top"><span>DATA READINESS SCORE</span><span class="metric-icon">✳</span></div><div class="metric-value"><strong id="score">—</strong><small>/ 100</small></div><div class="metric-foot"><span class="score-track"><i id="score-bar"></i></span><span id="score-label">Calculating</span></div></article>
+          <article class="metric"><div class="metric-top"><span>RECORDS REVIEWED</span><span class="metric-icon teal">▤</span></div><div class="metric-value"><strong id="total-count">—</strong></div><div class="metric-foot">Rows in current dataset</div></article>
+          <article class="metric"><div class="metric-top"><span>READY TO PUBLISH</span><span class="metric-icon green">✓</span></div><div class="metric-value"><strong id="ready-count">—</strong></div><div class="metric-foot">Passed all checks</div></article>
+          <article class="metric"><div class="metric-top"><span>NEEDS REVIEW</span><span class="metric-icon amber">◷</span></div><div class="metric-value"><strong id="review-count">—</strong></div><div class="metric-foot">Warnings to verify</div></article>
+          <article class="metric"><div class="metric-top"><span>VALIDATION ERRORS</span><span class="metric-icon red">!</span></div><div class="metric-value"><strong id="invalid-count">—</strong></div><div class="metric-foot">Fix before publishing</div></article>
+        </section>
+        <section class="workspace-grid" id="map-section">
+          <article class="panel map-panel"><div class="panel-head"><div><div class="panel-title">Spatial review</div><div class="panel-sub">Point locations and illustrative district review extent</div></div><div class="map-tools"><div class="segmented" role="group" aria-label="Filter map records"><button class="active" data-map-filter="all">All</button><button data-map-filter="ready">Ready</button><button data-map-filter="flagged">Flagged</button></div><button class="icon-button" id="zoom-map" title="Zoom to review extent">⤢</button></div></div><div class="map-holder"><div id="map" aria-label="Map preview of maintenance records"></div><div class="map-legend"><b>RECORD REVIEW</b><span><i class="legend-dot ok"></i>Ready to publish</span><span><i class="legend-dot warn"></i>Needs review</span><span><i class="legend-dot fail"></i>Validation error</span></div><div class="map-disclaimer">Illustrative extent · not an official district boundary</div></div><div class="map-foot"><span><b id="mapped-count">—</b> records with mappable coordinates</span><span>Coordinate standard <b>WGS 84 · EPSG:4326</b></span></div></article>
+          <article class="panel checks-panel" id="quality-section"><div class="panel-head"><div><div class="panel-title">Quality check results</div><div class="panel-sub">Rule-based screening before GIS publication</div></div><span class="run-badge"><i></i> CHECKS RUN</span></div><div class="checks-summary"><div><strong id="issue-count">—</strong><small>issues found</small></div><div><strong id="duplicate-count">—</strong><small>duplicate IDs</small></div><div><strong id="checked-count">—</strong><small>records checked</small></div></div><div class="rule-list" id="rule-list"></div><div class="check-note"><span>ⓘ</span>Warnings need steward review. Only records with no errors or warnings appear in the clean GeoJSON export.</div></article>
+        </section>
+        <section class="records-grid" id="catalog">
+          <article class="panel records-panel"><div class="panel-head records-head"><div><div class="panel-title">Record review queue</div><div class="panel-sub">Select a row to inspect validation details and its map location</div></div><div class="record-tools"><div class="search-wrap"><span>⌕</span><input id="search-records" type="search" placeholder="Search records" aria-label="Search work orders"></div><select id="record-filter" class="select"><option value="all">All records</option><option value="ready">Ready</option><option value="review">Needs review</option><option value="invalid">Invalid</option></select></div></div><div class="table-scroll"><table><thead><tr><th>WORK ORDER</th><th>ACTIVITY</th><th>ROUTE / LOCATION</th><th>COORDINATES</th><th>QUALITY STATUS</th><th></th></tr></thead><tbody id="record-rows"></tbody></table></div><div class="table-foot"><span id="table-count">—</span><span>CSV rows stay in this browser session</span></div></article>
+          <aside class="panel metadata-panel"><div class="panel-head"><div><div class="panel-title">Dataset profile</div><div class="panel-sub">Stewardship metadata</div></div><button class="icon-button" id="download-metadata" title="Download metadata JSON">↓</button></div><div class="metadata-form"><label>Dataset name<input id="meta-name" value="District 8 Maintenance Activity — Demo"></label><label>Data steward<input id="meta-owner" value="Maintenance Data Steward (sample)"></label><label>Source system<input id="meta-source" value="Synthetic IMMS-style feed"></label><div class="metadata-pair"><label>Update cadence<select id="meta-cadence"><option>Hourly (demo)</option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>As needed</option></select></label><label>Coordinate reference<select id="meta-crs"><option>WGS 84 · EPSG:4326</option><option>California State Plane · verify zone</option><option>Unknown · needs review</option></select></label></div><label>Dataset purpose<textarea id="meta-purpose" rows="3">Illustrative maintenance activities used to demonstrate spatial quality checks, metadata stewardship, and GIS export.</textarea></label><div class="metadata-foot"><span class="lock">▣</span><span>Classification <b>Synthetic / public demo</b><small>No sensitive fields included</small></span></div><button class="button button-light metadata-save" id="save-profile">Save profile in this session</button></div></aside>
+        </section>
+        <section class="ingest-panel panel"><div class="ingest-icon">⇧</div><div class="ingest-copy"><b>Review another maintenance extract</b><span>Drop a CSV here or choose a local file. Processing stays in your browser.</span></div><label class="button button-light upload-btn" for="csv-file">Choose CSV <span>＋</span><input type="file" id="csv-file" accept=".csv,text/csv" hidden></label><button class="text-button" id="load-sample">Reload sample dataset</button><span id="upload-status" aria-live="polite"></span></section>
+        <footer class="footer"><span>District 8 Maintenance GIS Data Workbench · Portfolio project</span><span>Built with HTML, JavaScript, Leaflet · <a href="https://github.com/Jashwanth248/Jashwanth-Bheema/tree/main/06-district-8-maintenance-gis-workbench" target="_blank" rel="noreferrer">Source repository ↗</a></span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="src/app.mjs"></script>
+</body>
+</html>
