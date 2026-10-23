@@ -88,6 +88,20 @@ These project summaries are designed for resumes, LinkedIn, recruiter review, an
 
 ---
 
+## District 8 Maintenance GIS Data Workbench
+
+**Geospatial Data Integration, Quality, and Stewardship Application**
+
+- **Built a Maintenance Data Intake Workflow:** Created a browser-based workbench that loads synthetic IMMS-style CSV data or a local user-selected extract and checks required fields, duplicate work-order IDs, activity/status domains, route formats, coordinates, dates, and acreage values.
+- **Implemented Spatial Quality Review:** Added quality-coded map markers, a review extent check, a record queue, and row-level findings so a steward can inspect and correct issues before GIS publication.
+- **Prepared Governed GIS Outputs:** Added an editable dataset metadata profile, clean WGS 84 GeoJSON export for rows that pass all checks, annotated CSV review output, and a machine-readable QA report.
+- **Kept the Workflow Reproducible:** Built the validation and export logic as dependency-free JavaScript modules with Node.js automated tests and documented schema, data dictionary, quality rules, and production adaptation considerations.
+- **Expected Output:** A steward loads a maintenance extract and receives a quality summary, mapped records, actionable data issues, and clearly classified GIS-ready output.
+- **Technologies:** JavaScript ES modules, HTML, CSS, Leaflet, CSV, GeoJSON, WGS 84 / CRS84, Node.js test runner.
+- **Repository:** [District 8 Maintenance GIS Data Workbench](https://github.com/Jashwanth248/Jashwanth-Bheema/tree/main/06-district-8-maintenance-gis-workbench)
+
+---
+
 ## Recommended Resume Selection
 
 A two-page resume should normally include only three projects:
@@ -96,4 +110,4 @@ A two-page resume should normally include only three projects:
 2. **Airline Operations Command Center** for Data Analyst and Data Engineer roles.
 3. **DocuMind Multimodal RAG** for AI/ML Engineer and Software Developer roles.
 
-Use **PulseCart** instead of DocuMind when applying for DevOps, Cloud, Platform, or SRE positions. Use **Road Friend** for full-stack, AI application, or agentic-software positions.
+Use **PulseCart** instead of DocuMind when applying for DevOps, Cloud, Platform, or SRE positions. Use **Road Friend** for full-stack, AI application, or agentic-software positions. For GIS Coordinator or geospatial data stewardship roles, prioritize the **District 8 Maintenance GIS Data Workbench** and pair it with the project most relevant to the position's analytics or application duties.
