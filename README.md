@@ -11,7 +11,7 @@ This repository contains production-oriented portfolio projects. They are delibe
 | [03 — ML Anomaly Monitoring](03-ml-anomaly-monitoring) | Anomaly scoring and drift monitoring | Feature engineering, model evaluation, monitoring |
 | [04 — Data Sentinel](04-data-sentinel) | Confidence-aware multi-agent intake | Semantic schema retrieval, cleaning, policy validation, anomaly detection, human review |
 | [05 — Prompt Playground](05-llm-evaluation-platform) | LLM release evaluation platform | Prompt versioning, regression checks, dashboard, FastAPI, Docker, CI |
-| [06 — Maintenance GIS Data Workbench](06-district-8-maintenance-gis-workbench) | Maintenance-record GIS intake and quality review | Spatial data validation, metadata stewardship, Leaflet, WGS 84 GeoJSON, Node tests |
+| [06 — SylvaGrid: Vegetation & Maintenance Intelligence](https://github.com/Jashwanth248/SylvaGrid) | Live vegetation maintenance GIS operations and treatment reporting | Spatial visualization, acreage normalization, CSV quality checks, GeoJSON, periodic summaries |
 
 ## Portfolio principles
 
@@ -27,7 +27,6 @@ python -m unittest discover -s 02-ai-data-quality-agent/tests
 python -m unittest discover -s 03-ml-anomaly-monitoring/tests
 python -m unittest discover -s 04-data-sentinel/tests
 python -m pytest -q 05-llm-evaluation-platform/tests
-node --test 06-district-8-maintenance-gis-workbench/tests
 ```
 
 ## Contact
