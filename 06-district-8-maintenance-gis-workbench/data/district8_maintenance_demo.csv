@@ -1,0 +1,24 @@
+work_order_id,activity_type,work_status,district,route,location_description,latitude,longitude,acres,scheduled_date,updated_at,source_system
+MNT-24001,Brush clearing,In Progress,8,I-10,West of Redlands,34.055,-117.205,12.5,2026-10-24,2026-10-22T08:15:00Z,Synthetic IMMS-style feed
+MNT-24002,Fuel reduction,Planned,8,SR-18,Highland foothill edge,34.135,-117.185,22,2026-10-28,2026-10-22T08:20:00Z,Synthetic IMMS-style feed
+MNT-24003,Tree trimming,Complete,8,SR-210,Fontana corridor,34.134,-117.435,7.2,2026-10-19,2026-10-21T16:05:00Z,Synthetic IMMS-style feed
+MNT-24004,Fire break,In Progress,8,I-15,Cajon Pass south approach,34.266,-117.492,31,2026-10-23,2026-10-22T08:24:00Z,Synthetic IMMS-style feed
+MNT-24005,Debris removal,Planned,8,SR-38,Mill Creek Road approach,34.075,-116.985,5,2026-11-02,2026-10-22T08:30:00Z,Synthetic IMMS-style feed
+MNT-24006,Drainage inspection,Complete,8,I-10,Colton interchange,34.073,-117.313,0,2026-10-20,2026-10-21T14:20:00Z,Synthetic IMMS-style feed
+MNT-24007,Brush clearing,On Hold,8,SR-60,Jurupa Valley edge,34.012,-117.46,9.3,2026-10-29,2026-10-22T07:48:00Z,Synthetic IMMS-style feed
+MNT-24008,Fuel reduction,Planned,8,SR-330,Highland to mountain route,34.137,-117.158,18.4,2026-11-04,2026-10-22T08:35:00Z,Synthetic IMMS-style feed
+MNT-24009,Tree trimming,In Progress,8,I-15,Devore approach,34.213,-117.404,11.8,2026-10-25,2026-10-22T08:42:00Z,Synthetic IMMS-style feed
+MNT-24010,Brush clearing,Complete,8,SR-210,Rancho Cucamonga segment,34.121,-117.569,6.7,2026-10-18,2026-10-20T11:00:00Z,Synthetic IMMS-style feed
+MNT-24011,Fire break,Planned,8,SR-18,Running Springs connector,34.205,-117.109,16.2,2026-11-06,2026-10-22T08:50:00Z,Synthetic IMMS-style feed
+MNT-24012,Debris removal,In Progress,8,I-10,Banning Pass west,33.929,-116.965,4.1,2026-10-26,2026-10-22T08:56:00Z,Synthetic IMMS-style feed
+MNT-24013,Brush clearing,Planned,8,I-40,Barstow south edge,34.852,-117.016,28.6,2026-11-09,2026-10-22T09:01:00Z,Synthetic IMMS-style feed
+MNT-24014,Tree trimming,Complete,8,SR-60,Riverside east frontage,33.982,-117.322,3.8,2026-10-17,2026-10-19T13:25:00Z,Synthetic IMMS-style feed
+MNT-24015,Fuel reduction,In Progress,8,I-15,Victorville transition,34.492,-117.286,25.5,2026-10-27,2026-10-22T09:05:00Z,Synthetic IMMS-style feed
+MNT-24016,Brush clearing,Planned,8,SR-38,Big Bear access,34.241,-116.911,-2,2026-11-11,2026-10-22T09:10:00Z,Synthetic IMMS-style feed
+MNT-24017,Tree trimming,Planned,8,I-10,Redlands east,34.055,-117.205,8,2026-10-30,2026-10-22T09:14:00Z,Synthetic IMMS-style feed
+MNT-24018,Fire break,Planned,8,SR-210,High Desert segment,35.271,-117.001,19,2026-11-13,2026-10-22T09:20:00Z,Synthetic IMMS-style feed
+MNT-24019,Brush clearing,Planned,8,I-15,North service road,34.448,,14,2026-11-03,2026-10-22T09:26:00Z,Synthetic IMMS-style feed
+MNT-24020,Unknown task,In Progress,8,Route 8,Unknown segment,34.045,-117.119,10,2026-02-31,2026-10-22T09:32:00Z,Synthetic IMMS-style feed
+MNT-24021,Drainage inspection,Planned,8,I-10,Ontario edge,34.061,-117.652,0,2026-11-05,2026-10-22T09:38:00Z,Synthetic IMMS-style feed
+MNT-24022,Brush clearing,In Progress,8,SR-210,San Bernardino west,34.112,-117.326,13.7,2026-10-29,2026-10-22T09:45:00Z,Synthetic IMMS-style feed
+MNT-24023,Fuel reduction,Complete,8,SR-38,Yucaipa north slope,34.054,-117.043,21.4,2026-10-16,2026-10-18T15:10:00Z,Synthetic IMMS-style feed
